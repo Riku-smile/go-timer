@@ -33,7 +33,7 @@ func (s *StopWatch) Show() string {
 	hh := s.duration() / time.Hour
 	mm := s.duration() / time.Minute
 	ss := s.duration() / time.Second
-	diff := strconv.Itoa(int(hh)) + ": " + strconv.Itoa(int(mm)) + "' " + strconv.Itoa(int(ss))
+	diff := strconv.Itoa(int(hh)) + "h " + strconv.Itoa(int(mm)) + "m " + strconv.Itoa(int(ss)) + "s"
 	return diff
 }
 
