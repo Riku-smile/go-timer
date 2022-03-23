@@ -16,7 +16,11 @@ limitations under the License.
 package cmd
 
 import (
-	"go-timer/stopwatch"
+	"fmt"
+	stopwatch "go-timer/pkg"
+	"os"
+	"os/signal"
+	"syscall"
 
 	"github.com/spf13/cobra"
 )
@@ -32,8 +36,17 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		// シグナルを受け取るチャネルを作成
+		quit := make(chan os.Signal, 1)
+		signal.Notify(quit, os.Interrupt, syscall.SIGTERM)
+		// ストップウォッチ生成
 		watch := stopwatch.NewStart()
+		println("計測開始>>>")
+		// Ctrl + C が押下されたとき、以下の処理を実施
+		<-quit
+		// ストップウォッチ終了処理
 		watch.Stop()
+		fmt.Printf("\n<<<経過時間: %v\n", watch.Show())
 	},
 }
 
