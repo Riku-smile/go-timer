@@ -17,10 +17,11 @@ package cmd
 
 import (
 	"fmt"
-	stopwatch "go-timer/pkg"
 	"os"
 	"os/signal"
 	"syscall"
+
+	stopwatch "github.com/Riku-smile/go-timer/pkg"
 
 	"github.com/spf13/cobra"
 )

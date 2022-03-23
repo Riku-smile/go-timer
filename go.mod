@@ -1,4 +1,4 @@
-module go-timer
+module github.com/Riku-smile/go-timer
 
 go 1.17
 
