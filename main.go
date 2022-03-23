@@ -15,8 +15,8 @@ limitations under the License.
 */
 package main
 
-import "go-timer/cmd"
+import "github.com/Riku-smile/go-timer/cmd"
 
 func main() {
-  cmd.Execute()
+	cmd.Execute()
 }
