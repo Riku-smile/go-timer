@@ -42,7 +42,7 @@ to quickly create a Cobra application.`,
 		signal.Notify(quit, os.Interrupt, syscall.SIGTERM)
 		// ストップウォッチ生成
 		watch := stopwatch.NewStart()
-		println("計測開始>>>")
+		println("計測開始>>>\nCtrl+Cで終了")
 		// Ctrl + C が押下されたとき、以下の処理を実施
 		<-quit
 		// ストップウォッチ終了処理
