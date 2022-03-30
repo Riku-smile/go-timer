@@ -29,7 +29,7 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "go-timer",
+	Use:   "goTimer",
 	Short: "ストップウォッチの機能を提供しています。",
 	Long: `ストップウォッチの機能を提供しています。
 
