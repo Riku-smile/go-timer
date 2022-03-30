@@ -21,7 +21,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	stopwatch "github.com/Riku-smile/go-timer/pkg"
+	stopwatch "github.com/riku-smile/go-timer/pkg"
 
 	"github.com/spf13/cobra"
 )
