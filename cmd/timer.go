@@ -34,9 +34,13 @@ var timerCmd = &cobra.Command{
 	例： 1h30m45s -> １時間３０分４５秒のタイマーを設定する。`,
 	Run: func(cmd *cobra.Command, args []string) {
 		timer := time.NewTimer(pkg.SetSeconds(args[0]) * time.Second)
-		fmt.Printf("%vのタイマーを開始しました", pkg.SetTimer(args[0]))
+		fmt.Printf("%vのタイマーを開始しました\n", pkg.SetTimer(args[0]))
 		<-timer.C
-		fmt.Printf("%vのタイマーが終了しました", pkg.SetTimer(args[0]))
+		// err := exec.Command("printf", "'\a'").Run()
+		// if err != nil {
+		// 	panic(err)
+		// }
+		fmt.Printf("%vのタイマーが終了しました\n", pkg.SetTimer(args[0]))
 	},
 }
 
