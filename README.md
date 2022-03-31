@@ -11,7 +11,7 @@ CLI上でストップウォッチ機能、タイマー機能が利用できま�
 ```bash
 go get github.com/riku-smile/go-timer
 or
-git clone https://github.com/riku-smile/go-timer
+git clone https://github.com/riku-smile/go-timer.git
 ```
 
 # Usage
