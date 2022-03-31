@@ -17,22 +17,26 @@ package cmd
 
 import (
 	"fmt"
+	"time"
 
+	"github.com/riku-smile/go-timer/pkg"
 	"github.com/spf13/cobra"
 )
 
 // timerCmd represents the timer command
 var timerCmd = &cobra.Command{
 	Use:   "timer",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "コマンドライン上で動作するタイマー機能です。",
+	Long: `コマンドライン上で動作するタイマー機能です。
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	半角数字を用いて、()h<>m[]s の形で利用してください。
+	それぞれ、()時間<>分[]秒 という意味になります。
+	例： 1h30m45s -> １時間３０分４５秒のタイマーを設定する。`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("timer called")
+		timer := time.NewTimer(pkg.SetSeconds(args[0]) * time.Second)
+		fmt.Printf("%vのタイマーを開始しました", pkg.SetTimer(args[0]))
+		<-timer.C
+		fmt.Printf("%vのタイマーが終了しました", pkg.SetTimer(args[0]))
 	},
 }
 
