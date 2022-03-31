@@ -4,31 +4,45 @@
 
 # Features
 
-"hoge"のセールスポイントや差別化などを説明する
+CLI上でストップウォッチ機能、タイマー機能が利用できます。
 
 # Installation
 
-Requirementで列挙したライブラリなどのインストール方法を説明する
-
 ```bash
 go get github.com/riku-smile/go-timer
+or
+git clone https://github.com/riku-smile/go-timer
 ```
 
 # Usage
 
+*stopwatch
+
 ```bash
-go-timer stopwatch
+your-repogitory/go-timer$ go run main.go stopwatch
+```
+
+*timer
+```bash
+your-repogitory/go-timer$ go run main.go timer <time>
 ```
 
 # Note
 
-未完成です
+## stopwatch
+  ストップウォッチ機能を提供します。
+  Ctrl+Cで終了した地点までの時間を計測します。
+
+## timer <time>
+  タイマー機能を提供します。
+  <time>の箇所に、半角数字を用いて()h<>m[]s の形でタイマーを設定してください。
+	それぞれ、()時間<>分[]秒 という意味になります。
+	例： 1h30m45s -> １時間３０分４５秒のタイマーを設定する。
 
 # Author
 
 * Riku-smile
 
 # License
-ライセンスを明示する
 
 "go-timer" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
