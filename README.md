@@ -10,7 +10,11 @@ CLI上でストップウォッチ機能、タイマー機能が利用できま�
 
 ```bash
 go get github.com/riku-smile/go-timer
-or
+
+go install
+```
+
+```bash
 git clone https://github.com/riku-smile/go-timer.git
 
 go install
