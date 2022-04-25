@@ -22,13 +22,13 @@ go install
 
 # Usage
 
-*stopwatch
+* stopwatch
 
 ```bash
 go-timer stopwatch
 ```
 
-*timer
+* timer
 ```bash
 go-timer timer <time>
 ```
