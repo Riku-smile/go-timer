@@ -12,6 +12,8 @@ CLI上でストップウォッチ機能、タイマー機能が利用できま�
 go get github.com/riku-smile/go-timer
 or
 git clone https://github.com/riku-smile/go-timer.git
+
+go install
 ```
 
 # Usage
@@ -19,12 +21,12 @@ git clone https://github.com/riku-smile/go-timer.git
 *stopwatch
 
 ```bash
-your-repogitory/go-timer$ go run main.go stopwatch
+go-timer stopwatch
 ```
 
 *timer
 ```bash
-your-repogitory/go-timer$ go run main.go timer <time>
+go-timer timer <time>
 ```
 
 # Note
