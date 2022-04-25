@@ -13,7 +13,7 @@ go get github.com/riku-smile/go-timer
 
 go install
 ```
-
+or
 ```bash
 git clone https://github.com/riku-smile/go-timer.git
 
